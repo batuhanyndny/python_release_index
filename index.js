@@ -21,7 +21,7 @@ app.get("/", cacheService.cache("1 day"), async (req, res) => {
 });
 
 // Initialize server
-app.listen(5001, () => {
+app.listen(process.env.PORT || 3000, () => {
 	console.log("Running on port 5001.");
 });
 
